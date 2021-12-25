@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "57ab4248-6645-4ca8-84b2-e7286959f9be",
+		"name": "doytest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "showAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/showAll",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"showAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name_hero",
+							"value": "человек-паук"
+						},
+						{
+							"key": "universe",
+							"value": "MARVEL",
+							"type": "text"
+						},
+						{
+							"key": "ability",
+							"value": "лазает по стенам",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "18",
+							"type": "text"
+						},
+						{
+							"key": "main_villain",
+							"value": "Отто Октавиус",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/add",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get/{hero_id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/get/3",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"get",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit/{hero_id}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "WOW"
+						},
+						{
+							"key": "year",
+							"value": "2006",
+							"type": "text"
+						},
+						{
+							"key": "genre",
+							"value": "Шутер, кооп",
+							"type": "text"
+						},
+						{
+							"key": "developer",
+							"value": "VALVe",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/edit/3",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"edit",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete/{hero_id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/delete/3",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "http://localhost"
+		}
+	]
+}
